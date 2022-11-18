@@ -1,3 +1,7 @@
-# Create Environment Variables
+# Hosted Version
 
-When cloning this repo you must create two .env. files, one for the dev data and one for the test data. Inside each add the text 'PGDATABASE=_INSERT_DATABASE_NAME_HERE_, replacing the asterisks with the name of the database respectively.
+This is the hosted version of an API project.
+
+To read the original repos README to understand what this RESTful API is about please go to this link:
+
+[NC-Games-Project](https://github.com/DarthShan/NC-Games-Project)
