@@ -29,9 +29,7 @@ exports.checkUsernameExists = (review_id, data) => {
       `
     SELECT username FROM reviews
     JOIN users ON owner = username
-    WHERE review_id = $1
-    `,
-      [review_id]
+    `
     )
     .then(({ rows }) => {
       if (rows[0].username !== username) {
