@@ -32,7 +32,11 @@ exports.checkUsernameExists = (review_id, data) => {
     `
     )
     .then(({ rows }) => {
-      if (rows[0].username !== username) {
+      const userWhiteList = rows.map((user) => {
+        return user.username;
+      });
+
+      if (!userWhiteList.includes(username)) {
         return Promise.reject({ status: 404, msg: "Username does not exist" });
       }
     });
